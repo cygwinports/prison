@@ -11,3 +11,20 @@
  
  install( FILES
           abstractbarcode.h
+@@ -32,8 +34,6 @@ install( FILES
+          )
+ 
+ set(INCLUDE_DIRECTORY ${CMAKE_INSTALL_PREFIX}/include)
+-get_target_property(LIB_OUT_NAME prison LOCATION)
+-get_filename_component(LIB_OUT_NAME ${LIB_OUT_NAME} NAME)
+ set(LIBPATH ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX})
+ 
+ configure_file(
+--- origsrc/prison-1.0/lib/prison/PrisonConfig.cmake.in	2011-05-08 11:16:44.000000000 -0500
++++ src/prison-1.0/lib/prison/PrisonConfig.cmake.in	2012-05-15 22:35:04.851092700 -0500
+@@ -1,3 +1,4 @@
+-SET(PRISON_LIBRARIES "@LIBPATH@/@LIB_OUT_NAME@" CACHE FILEPATH "Prison barcode library")
++find_library(PRISON_LIBRARY prison HINTS @LIBPATH@ NO_DEFAULT_PATH)
++SET(PRISON_LIBRARIES "${PRISON_LIBRARY}" CACHE FILEPATH "Prison barcode library")
+ SET(PRISON_INCLUDE_DIR "@INCLUDE_DIRECTORY@" CACHE PATH "Include path for prison barcode library")
+ SET(PRISON_FOUND "TRUE")
