@@ -1,0 +1,13 @@
+--- origsrc/prison-1.0/lib/prison/CMakeLists.txt	2011-05-08 11:16:44.000000000 -0500
++++ src/prison-1.0/lib/prison/CMakeLists.txt	2012-05-15 21:29:02.137438400 -0500
+@@ -14,7 +14,9 @@ set_target_properties(prison PROPERTIES
+ 
+ set(LIB_SUFFIX "" CACHE STRING "Define suffix of directory name (32/64)" )
+ 
+-install( TARGETS prison DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX} )
++install( TARGETS prison LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++                        ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}
++                        RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin )
+ 
+ install( FILES
+          abstractbarcode.h

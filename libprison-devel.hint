@@ -1,0 +1,6 @@
+category: KDE
+requires: libprison0 libQtCore4-devel libQtGui4-devel
+external-source: prison
+sdesc: "Qt barcode library (development)"
+ldesc: "prison is a barcode api currently offering a nice Qt api to 
+produce QRCode barcodes and DataMatrix barcodes."

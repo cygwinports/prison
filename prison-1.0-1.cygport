@@ -1,0 +1,10 @@
+inherit qt4-cmake
+
+
+HOMEPAGE="http://projects.kde.org/prison"
+SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.gz"
+PATCH_URI="1.0-cmake-install.patch"
+
+PKG_NAMES="libprison0 libprison-devel"
+libprison0_CONTENTS="usr/bin/cygprison-0.dll"
+libprison_devel_CONTENTS="usr/include/ usr/lib/ usr/share/"
