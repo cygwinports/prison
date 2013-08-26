@@ -1,6 +1,0 @@
-category: KDE
-requires: libdmtx0 libgcc1 libqrencode3 libQtCore4 libQtGui4 libstdc++6
-external-source: prison
-sdesc: "Qt barcode library (runtime)"
-ldesc: "prison is a barcode api currently offering a nice Qt api to 
-produce QRCode barcodes and DataMatrix barcodes."

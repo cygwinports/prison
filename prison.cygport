@@ -1,0 +1,16 @@
+inherit qt4-cmake
+
+NAME="prison"
+VERSION=1.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Qt barcode library"
+DESCRIPTION="prison is a barcode api currently offering a nice Qt api to
+produce QRCode barcodes and DataMatrix barcodes."
+HOMEPAGE="http://projects.kde.org/prison"
+SRC_URI="mirror://kde/stable/prison/${VERSION}/src/prison-${VERSION}.tar.gz"
+PATCH_URI="1.0-cmake-install.patch"
+
+PKG_NAMES="libprison0 libprison-devel"
+libprison0_CONTENTS="usr/bin/cygprison-0.dll"
+libprison_devel_CONTENTS="usr/include/ usr/lib/ usr/share/"
